@@ -61,6 +61,11 @@ html {
     letter-spacing: 2px;
 }
 
+.header {
+    background-color: #fff;
+    width: 100%;
+}
+
 .header__nav {
     display: flex;
     justify-content: flex-end;
@@ -86,6 +91,11 @@ html {
 .header__nav li:last-child {
     margin-right: 0;
 }
+
+
+/*******************************************************
+                      About me
+_______________________________________________________*/
 
 .about-me {
     width: 100%;
@@ -147,6 +157,12 @@ html {
     border-radius: 50%;
 }
 
+
+/*******************************************************
+                      PORTFOLIO
+*******************************************************/
+
+
 .portfolio {
     width: 100%;
     min-height: 500px;
@@ -154,6 +170,7 @@ html {
     box-shadow: 0 0 5px 1px black;
     padding-top: 40px;
     padding-bottom: 100px;
+    z-index: 10;
 }
 
 .portfolio__content {
@@ -169,19 +186,76 @@ html {
 
 .portfolio__block {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 600px;
+}
+
+.portfolio__item {
+    min-width: 36%;
+    min-height: 200px;
+    background-color: #fff;
     margin-bottom: 30px;
+    background-image: url(../static/head2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
 }
 
-.portfolio__block:last-child {
-    margin-bottom: 0;
+
+/*******************************************************
+                      Skills
+_______________________________________________________*/
+
+.skills {
+    width: 100%;
+    min-height: 500px;
+    background-color: var(--mauve);
+    padding-top: 40px;
+    padding-bottom: 100px;
 }
 
-.portfolio__examples {
+.skills__content {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--blue);
 }
 
-.portfolio__examples_item {
+.skills__content .line {
+    border-color: var(--dark);
+}
+
+.skills__content .block-title {
+    color: var(--dark);
+}
+
+.skills__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 600px;
+}
+
+.skills__item {
+
     min-width: 30%;
-    margin-right: 30px;
+    min-height: 200px;
+    margin-bottom: 30px;
+    background-image: url(../static/html5.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
