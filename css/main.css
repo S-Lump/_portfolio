@@ -85,11 +85,48 @@ html {
 }
 
 .header__nav li {
-    margin-right: 15px;
+    position: relative;
+    padding-left: 15px;
+    margin-right: 20px;
 }
 
 .header__nav li:last-child {
     margin-right: 0;
+}
+
+.header__nav li::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 1px;
+    left: 0;
+    background-image: url(../static/blogger-logotype.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header__nav li:nth-child(2)::before {
+    background-image: url(../static/info.svg);
+}
+
+.header__nav li:nth-child(3)::before {
+    background-image: url(../static/portfolio.svg);
+}
+
+.header__nav li:nth-child(4)::before {
+    background-image: url(../static/star.svg);
+}
+
+.header__nav li:nth-child(5)::before {
+    background-image: url(../static/contact.svg);
+}
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 
@@ -169,7 +206,7 @@ _______________________________________________________*/
     background-color: var(--gray);
     box-shadow: 0 0 5px 1px black;
     padding-top: 40px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     z-index: 10;
 }
 
@@ -243,7 +280,7 @@ _______________________________________________________*/
 
 .skills__item {
 
-    min-width: 30%;
+    min-width: 22%;
     min-height: 200px;
     margin-bottom: 30px;
     background-image: url(../static/html5.svg);
@@ -253,9 +290,123 @@ _______________________________________________________*/
     border-radius: 5px;
 }
 
-.header-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+.css3 {
+    background-image: url(../static/css-3.svg);
+}
+
+.js {
+    background-image: url(../static/js.svg);
+}
+
+.python {
+    background-image: url(../static/python.svg);
+}
+
+.django {
+    background-image: url(../static/icons8-django.svg);
+}
+
+.linux {
+    background-image: url(../static/linux.svg);
+}
+
+.ps {
+    background-image: url(../static/icons8-adobe-photoshop.svg);
+}
+
+.figma {
+    background-image: url(../static/icons8-figma.svg);
+}
+
+.github {
+    background-image: url(../static/icons8-github.svg);
+}
+
+.trello {
+    background-image: url(../static/icons8-trello.svg);
+}
+
+.cplusplus {
+    background-image: url(../static/icons8-c++.svg);
+}
+
+.vue {
+    background-image: url(../static/icons8-vue-js.svg);
+}
+
+/*******************************************************
+                      Contacts
+_______________________________________________________*/
+
+.contacts {
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--gray);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.contacts__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts__content .line {
+    border-color: var(--dark);
+}
+
+.contacts__content .block-title {
+    color: var(--dark);
+}
+
+.contacts__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 200px;
+}
+
+.contacts__item {
+
+    min-width: 30%;
+    min-height: 100px;
+    margin-bottom: 30px;
+    background-image: url(../static/html5.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.gmail {
+    background-image: url(../static/gmail.svg);
+}
+
+.github {
+    background-image: url(../static/icons8-github.svg);
+}
+
+.tg {
+    background-image: url(../static/telegram.svg);
+}
+
+/*******************************************************
+                      Footer
+_______________________________________________________*/
+
+.footer {
+    width: 100%;
+    min-height: 10px;
+    background-color: var(--dark);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
