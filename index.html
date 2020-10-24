@@ -10,24 +10,24 @@
 <body>
     <div class="welcome">
         <div class="welcome-text">
-            <span>Здравствуйте! Меня зовут Григорий и я</span>
-            <span>FULL-STACK WEB DEVELOPER</span>
+            <span class="hello _anim-items">Здравствуйте! Меня зовут Григорий и я</span>
+            <span class="prof _anim-items">FULL-STACK WEB DEVELOPER</span>
         </div>
     </div>
-    <header class="header">
+    <div class="header">
         <div class="container">
-            <div class="logo"></div>
-            <nav>
+            <div class="header__content">
+                <a href="#" class="logo"></a>
                 <ul class="header__nav">
-                    <li class="blogging"><a href="">БЛОГ</a></li>
-                    <li class="information"><a href="">ОБО МНЕ</a></li>
-                    <li class="port"><a href="">ПОРТФОЛИО</a></li>
-                    <li class="star"><a href="">НАВЫКИ</a></li>
-                    <li class="contact"><a href="">КОНТАКТЫ</a></li>
+                    <li class="blogging"><a href="/">БЛОГ</a></li>
+                    <li class="information"><a href="#about-me">ОБО МНЕ</a></li>
+                    <li class="port"><a href="#portfolio">ПОРТФОЛИО</a></li>
+                    <li class="star"><a href="#skills">НАВЫКИ</a></li>
+                    <li class="contact"><a href="#contacts">КОНТАКТЫ</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </div>
     <main>
         <div id="about-me" class="about-me">
             <div class="container">
@@ -35,17 +35,22 @@
                     <div class="block-title">ОБО МНЕ</div>
                     <div class="line"></div>
                     <div class="about-me__description">
-                        <div class="about-me__photo">
-                            <img src="static/me.jpg" alt="" width="250" height="250" >
+                        <div class="about-me__photo _anim-items _anim-no-hide">
+                            <img src="static/me.jpg" alt="" width="250" height="250">
                         </div>
                         <div class="about-me__text">
                             <ul>
-                              <li>Высокое качество как графических материалов, так и внутренних алгоритмов работы сайта</li>
-                              <li>высшее образование по направлению "Информатика и вычислительная техника"</li>
-                              <li>университетская база по программированию на языках высокого уровня</li>
-                              <li>предоставление результатов на каждом значительном этапе работы с возможностью внести какие-то корректировки</li>
-                              <li>внимательность ко всем требованиям заказчика и прояснение любых неясных моментов</li>
-                              <li>фриланс как основная деятельность, что означает полную отдачу в процессе работы над заказом</li>
+                                <li class="_anim-items _anim-no-hide">19 лет, студент второго курса, обучающийся на направлении "Прикладная информатика", заинтересованный в веб-разработке, готовый уделять интересным проектам до полноценных 8 часов в день</li>
+                                <li class="_anim-items _anim-no-hide">Ответственно отношусь к работе, соблюдая дедлайны</li>
+                                <li class="_anim-items _anim-no-hide">Развиваю свои навыки в качестве full-stack разработчика</li>
+                                <li class="_anim-items _anim-no-hide">Стек технологий для backend: python, django</li>
+                                <li class="_anim-items _anim-no-hide">Стек технологий для frontend: отличные знания css3, html5 и нативного js, также знаком с vue.js и react.js, bootstrap4,5(знаком, но предпочитаю обходиться без него для более чистого html-кода)</li>
+                                <li class="_anim-items _anim-no-hide">Имеются знания и опыт адаптивной и кроссбраузерной верстки (как пример - данный сайт)</li>
+                                <li class="_anim-items _anim-no-hide">Опыт работы с linux, git, trello, slack.</li>
+                                <li class="_anim-items _anim-no-hide">Создание и работа с макетами в figma и photoshop</li>
+                                <li class="_anim-items _anim-no-hide">Желание изучать новые технологии, расти как веб-специалист, укрепляя знания на практике и постоянно расширяя их</li>
+                                <li class="_anim-items _anim-no-hide">Готов в короткие сроки освоить необходимые технологии, требующиеся для проекта</li>
+                                <li class="_anim-items _anim-no-hide">Знание технического английского, умение быстро разбираться с документацией</li>
                             </ul>
                         </div>
                     </div>
@@ -53,67 +58,55 @@
             </div>
         </div>
 
-        <div class="portfolio">
+        <div class="portfolio" id="portfolio">
             <div class="container">
                 <div class="portfolio__content">
                     <div class="block-title">ПОРТФОЛИО</div>
                     <div class="line"></div>
                     <div class="portfolio__block">
-                        <div class="portfolio__item">
-
-                        </div>
-                        <div class="portfolio__item">
-                            
-                        </div>
-                        <div class="portfolio__item">
-                            
-                        </div>
-                        <div class="portfolio__item">
-
-                        </div>
-                        <div class="portfolio__item">
-                            
-                        </div>
-                        <div class="portfolio__item">
-                            
-                        </div>
+                        <div class="portfolio__item _anim-items _anim-no-hide"></div>
+                        <div class="portfolio__item _anim-items _anim-no-hide"></div>
+                        <div class="portfolio__item _anim-items _anim-no-hide"></div>
+                        <div class="portfolio__item _anim-items _anim-no-hide"></div>
+                        <div class="portfolio__item _anim-items _anim-no-hide"></div>
+                        <div class="portfolio__item _anim-items _anim-no-hide"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="skills">
+        <div class="skills" id="skills">
             <div class="container">
                 <div class="skills__content">
                     <div class="block-title">НАВЫКИ</div>
                     <div class="line"></div>
                     <div class="skills__block">
-                        <div class="skills__item html5"></div>
-                        <div class="skills__item css3"></div>
-                        <div class="skills__item js"></div>
-                        <div class="skills__item python"></div>
-                        <div class="skills__item django"></div>
-                        <div class="skills__item linux"></div>
-                        <div class="skills__item ps"></div>
-                        <div class="skills__item figma"></div>
-                        <div class="skills__item github"></div>
-                        <div class="skills__item trello"></div>
-                        <div class="skills__item cplusplus"></div>
-                        <div class="skills__item vue"></div>
+                        <div class="skills__item _anim-items _anim-no-hide html5"></div>
+                        <div class="skills__item _anim-items _anim-no-hide css3"></div>
+                        <div class="skills__item _anim-items _anim-no-hide js"></div>
+                        <div class="skills__item _anim-items _anim-no-hide python"></div>
+                        <div class="skills__item _anim-items _anim-no-hide django"></div>
+                        <div class="skills__item _anim-items _anim-no-hide linux"></div>
+                        <div class="skills__item _anim-items _anim-no-hide ps"></div>
+                        <div class="skills__item _anim-items _anim-no-hide figma"></div>
+                        <div class="skills__item _anim-items _anim-no-hide github"></div>
+                        <div class="skills__item _anim-items _anim-no-hide trello"></div>
+                        <div class="skills__item _anim-items _anim-no-hide cplusplus"></div>
+                        <div class="skills__item _anim-items _anim-no-hide vue"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="contacts">
+        <div class="contacts" id="contacts">
             <div class="container">
                 <div class="contacts__content">
                     <div class="block-title">КОНТАКТЫ</div>
                     <div class="line"></div>
                     <div class="contacts__block">
-                        <a href="mailto:grisga2001@gmail.com" class="contacts__item gmail"></a>
-                        <a href="https://github.com/S-Lump" class="contacts__item github"></a>
-                        <a href="https://t.me/S_Lump" class="contacts__item tg"></a>
+                        <a href="mailto:grisga2001@gmail.com" class="contacts__item _anim-items _anim-no-hide gmail"></a>
+                        <a href="https://github.com/S-Lump" class="contacts__item _anim-items _anim-no-hide github"></a>
+                        <a href="https://t.me/S_Lump" class="contacts__item _anim-items _anim-no-hide tg"></a>
                     </div>
                 </div>
             </div>
@@ -127,6 +120,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
