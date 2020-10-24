@@ -57,15 +57,51 @@ ________________________________________________________*/
     font-size: 24px;
 }
 
-.welcome-text span:first-child {
+.welcome-text span.hello {
     line-height: 100px;
 }
 
-.welcome-text span:last-child {
+.welcome-text span.prof {
     font-size: 50px;
     letter-spacing: 2px;
 }
 
+.hello,
+.hello-mobile,
+.hello2-mobile {
+    transform: translate(0, -100px);
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.hello._active,
+.hello-mobile._active,
+.hello2-mobile._active {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.prof,
+.prof-mobile,
+.prof2-mobile {
+    transform: translate(0, 100px);
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.prof._active,
+.prof-mobile._active,
+.prof2-mobile._active {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.hello-mobile,
+.hello2-mobile,
+.prof-mobile,
+.prof2-mobile {
+    display: none;
+}
 
 /*********************************************************
                         Header nav
@@ -151,28 +187,6 @@ ________________________________________________________*/
     top: 0;
     left: 0;
     z-index: 100;
-}
-
-.hello {
-    transform: translate(0, -100px);
-    opacity: 0;
-    transition: all 0.8s;
-}
-
-.hello._active {
-    transform: translate(0, 0);
-    opacity: 1;
-}
-
-.prof {
-    transform: translate(0, 100px);
-    opacity: 0;
-    transition: all 0.8s;
-}
-
-.prof._active {
-    transform: translate(0, 0);
-    opacity: 1;
 }
 
 
@@ -337,7 +351,7 @@ _______________________________________________________*/
 
 .portfolio__item {
     min-width: 36%;
-    min-height: 200px;
+    min-height: 150px;
     background-color: #fff;
     margin-bottom: 30px;
     background-image: url(../static/head2.jpg);
@@ -405,6 +419,10 @@ _______________________________________________________*/
     opacity: 0;
     transition: all 0.8s;
 } 
+
+.skills__item:hover {
+    transform: scale(1.1);
+}
 
 .skills__item._active {
     transform: translate(0, 0);
@@ -499,7 +517,6 @@ _______________________________________________________*/
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    border-right: 2px solid rgba(38, 47, 52, 0.3);
     transform: translate(0, 120%);
     opacity: 0;
     transition: all 0.8s;
@@ -508,6 +525,10 @@ _______________________________________________________*/
 .contacts__item._active {
     transform: translate(0, 0);
     opacity: 1;
+}
+
+.contacts__item:hover {
+    transform: scale(1.1);
 }
 
 .contacts__item:last-child {
@@ -544,3 +565,70 @@ _______________________________________________________*/
     align-items: center;
 }
 
+
+/*******************************************************
+                      media
+_______________________________________________________*/
+
+@media (max-width:992px) {
+	.container {
+		max-width: 750px;
+	}
+}
+@media (max-width:767px) {
+	.container {
+		max-width: none;
+    }
+    
+    .about-me__description {
+        flex-direction: column;
+    }
+
+    .header__nav li:not(:last-child) {
+        display: none;
+    }
+
+    .skills__item {
+        min-width: 40%;
+        margin-bottom: 10px;
+    }
+
+    .portfolio__block {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .portfolio__item {
+        min-width: 80%;
+        min-height: 100px;
+    }
+
+    .contacts__block {
+        flex-direction: column;
+    }
+
+    .icons {
+        font-size: 14px;
+    }
+
+    .hello,
+    .prof {
+        display: none;
+    }
+
+    .hello2-mobile {
+        margin-bottom: 20px;
+    }
+
+    .hello-mobile,
+    .hello2-mobile,
+    .prof-mobile,
+    .prof2-mobile {
+        display: inline;
+    }
+
+    .prof-mobile,
+    .prof2-mobile {
+        font-size: 52px;
+    }
+}
