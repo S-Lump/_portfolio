@@ -631,4 +631,8 @@ _______________________________________________________*/
     .prof2-mobile {
         font-size: 52px;
     }
+
+    .about-me__text li {
+        transform: translate(0, 120%);
+    }
 }
