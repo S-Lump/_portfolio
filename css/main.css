@@ -13,11 +13,10 @@ ul {
 }
 
 :root {
-    --purpur: #d83f87;
-    --dark: #2a1b3d;
-    --blue: #44318d;
-    --gray: #a4b3b6;
-    --mauve: #a06796;
+    --neon-red: #f34a4a;
+    --dark: #262f34;
+    --brown: #615049;
+    --crep: #f1d3bc;
 }
 
 html {
@@ -33,15 +32,21 @@ html {
     padding: 0 15px;
 }
 
+
+/*********************************************************
+                        Welcome page
+________________________________________________________*/
+
 .welcome {
     display: flex;
-
     width: 100%;
-    min-height: 800px;
-    background-image: url('../static/head2.jpg');
+    min-height: 750px;
+    background-image: url(../static/mac2.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .welcome-text {
@@ -61,16 +66,26 @@ html {
     letter-spacing: 2px;
 }
 
+
+/*********************************************************
+                        Header nav
+________________________________________________________*/
+
 .header {
-    background-color: #fff;
+    background-color: var(--brown);
     width: 100%;
+    height: 65px;
+    margin-top: 0;
+    padding-top: 0;
+    overflow: hidden;
 }
+
 
 .header__nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 30px;
+    height: 30px; 
 }
 
 .logo {
@@ -88,6 +103,15 @@ html {
     position: relative;
     padding-left: 15px;
     margin-right: 20px;
+}
+
+.header__nav li a {
+    color: var(--crep)
+}
+
+.header__nav li a:hover,
+.header__nav li a:active {
+    color: var(--neon-red)
 }
 
 .header__nav li:last-child {
@@ -129,6 +153,28 @@ html {
     z-index: 100;
 }
 
+.hello {
+    transform: translate(0, -100px);
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.hello._active {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.prof {
+    transform: translate(0, 100px);
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.prof._active {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
 
 /*******************************************************
                       About me
@@ -151,14 +197,13 @@ _______________________________________________________*/
     display: inline-block;
     font-size: 30px;
     line-height: 50px;
-    
 }
 
 .line {
     display: inline-block;
     width: 50px;
     height: 20px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
     margin-bottom: 30px;
 }
 
@@ -171,12 +216,72 @@ _______________________________________________________*/
 
 .about-me img {
     border-radius: 50%;
+    box-shadow: 0 0 2px 1px rgb(20, 20, 20);
+}
+
+.about-me__photo {
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.about-me__photo._active {
+    transform: translate(0, 0);
+    opacity: 1;
 }
 
 .about-me__text li {
     position: relative;
     padding-left: 10px;
     margin-bottom: 15px;
+    transform: translate(120%, 0);
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.about-me__text li._active {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.about-me__text li:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.about-me__text li:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.about-me__text li:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+.about-me__text li:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.about-me__text li:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+.about-me__text li:nth-child(7) {
+    transition-delay: 0.6s;
+}
+
+.about-me__text li:nth-child(8) {
+    transition-delay: 0.7s;
+}
+
+.about-me__text li:nth-child(9) {
+    transition-delay: 0.8s;
+}
+
+.about-me__text li:nth-child(10) {
+    transition-delay: 0.9s;
+}
+
+.about-me__text li:nth-child(11) {
+    transition-delay: 1s;
 }
 
 .about-me__text li:last-child {
@@ -190,7 +295,7 @@ _______________________________________________________*/
     left: -5px;
     width: 5px;
     height: 5px;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
 }
 
@@ -199,12 +304,11 @@ _______________________________________________________*/
                       PORTFOLIO
 *******************************************************/
 
-
 .portfolio {
     width: 100%;
     min-height: 500px;
-    background-color: var(--gray);
-    box-shadow: 0 0 5px 1px black;
+    background-color: var(--crep);
+    box-shadow: 0 0 5px 1px rgb(20, 20, 20);
     padding-top: 40px;
     padding-bottom: 80px;
     z-index: 10;
@@ -214,11 +318,12 @@ _______________________________________________________*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--blue);
+    color: var(--dark);
 }
 
 .portfolio__content .line {
-    border-color: var(--blue);
+    border-color: var(--dark);
+    opacity: 0.3;
 }
 
 .portfolio__block {
@@ -239,6 +344,14 @@ _______________________________________________________*/
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.8s;
+} 
+
+.portfolio__item._active {
+    transform: translate(0, 0);
+    opacity: 1;
 }
 
 
@@ -249,7 +362,7 @@ _______________________________________________________*/
 .skills {
     width: 100%;
     min-height: 500px;
-    background-color: var(--mauve);
+    background-color: var(--dark);
     padding-top: 40px;
     padding-bottom: 100px;
 }
@@ -262,11 +375,11 @@ _______________________________________________________*/
 }
 
 .skills__content .line {
-    border-color: var(--dark);
+    border-color: var(--mauve);
 }
 
 .skills__content .block-title {
-    color: var(--dark);
+    color: var(--mauve);
 }
 
 .skills__block {
@@ -288,6 +401,14 @@ _______________________________________________________*/
     background-size: contain;
     background-position: center;
     border-radius: 5px;
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.8s;
+} 
+
+.skills__item._active {
+    transform: translate(0, 0);
+    opacity: 1;
 }
 
 .css3 {
@@ -341,7 +462,7 @@ _______________________________________________________*/
 .contacts {
     width: 100%;
     min-height: 100px;
-    background-color: var(--gray);
+    background-color: var(--crep);
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -354,6 +475,7 @@ _______________________________________________________*/
 
 .contacts__content .line {
     border-color: var(--dark);
+    opacity: 0.3;
 }
 
 .contacts__content .block-title {
@@ -363,14 +485,13 @@ _______________________________________________________*/
 .contacts__block {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     width: 100%;
     min-height: 200px;
 }
 
 .contacts__item {
-
     min-width: 30%;
     min-height: 100px;
     margin-bottom: 30px;
@@ -378,7 +499,19 @@ _______________________________________________________*/
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    border-radius: 5px;
+    border-right: 2px solid rgba(38, 47, 52, 0.3);
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.8s;
+} 
+
+.contacts__item._active {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.contacts__item:last-child {
+    border: none;
 }
 
 .gmail {
@@ -400,7 +533,7 @@ _______________________________________________________*/
 .footer {
     width: 100%;
     min-height: 10px;
-    background-color: var(--dark);
+    background-color: var(--brown);
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -410,3 +543,4 @@ _______________________________________________________*/
     flex-direction: column;
     align-items: center;
 }
+
