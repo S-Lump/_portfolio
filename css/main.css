@@ -199,6 +199,7 @@ _______________________________________________________*/
     min-height: 500px;
     background-color: var(--dark);
     padding-top: 40px;
+    overflow: hidden;
 }
 
 .about-me__content {
