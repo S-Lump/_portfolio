@@ -116,6 +116,13 @@ ________________________________________________________*/
     overflow: hidden;
 }
 
+.header._on-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0.9;
+}
 
 .header__nav {
     display: flex;
@@ -574,11 +581,15 @@ _______________________________________________________*/
 @media (max-width:992px) {
 	.container {
 		max-width: 750px;
-	}
+    }
 }
 @media (max-width:767px) {
 	.container {
 		max-width: none;
+    }
+
+    .welcome {
+        background-image: linear-gradient(to top, #190A05, #870000);
     }
     
     .about-me__description {
