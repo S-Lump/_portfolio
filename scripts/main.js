@@ -1,4 +1,4 @@
-
+// Animation on scroll
 const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
@@ -34,3 +34,6 @@ if (animItems.length > 0) {
         animOnScroll();
     }, 300);
 }
+
+
+// 
