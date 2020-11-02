@@ -36,4 +36,15 @@ if (animItems.length > 0) {
 }
 
 
-// 
+// Fixed header
+const $welcome = document.querySelector('.welcome');
+const $header = document.querySelector('.header');
+
+window.addEventListener('scroll', fixHeader);
+function fixHeader(params) {
+    if (pageYOffset > $welcome.offsetHeight) {
+        $header.classList.add('_on-top');
+    } else if ($header.classList.contains('_on-top')) {
+        $header.classList.remove('_on-top');
+    }
+}
