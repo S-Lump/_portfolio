@@ -40,7 +40,7 @@ ________________________________________________________*/
 .welcome {
     display: flex;
     width: 100%;
-    min-height: 750px;
+    height: 100vh;
     background-image: url(../static/mac2.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
