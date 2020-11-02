@@ -72,6 +72,7 @@ ________________________________________________________*/
     transform: translate(0, -100px);
     opacity: 0;
     transition: all 0.8s;
+    transition-delay: 0.3s;
 }
 
 .hello._active,
@@ -87,6 +88,7 @@ ________________________________________________________*/
     transform: translate(0, 100px);
     opacity: 0;
     transition: all 0.8s;
+    transition-delay: 0.3s;
 }
 
 .prof._active,
@@ -149,12 +151,13 @@ ________________________________________________________*/
 }
 
 .header__nav li a {
-    color: var(--crep)
+    color: var(--crep); 
+    transition: all 0.4s;
 }
 
 .header__nav li a:hover,
 .header__nav li a:active {
-    color: var(--neon-red)
+    color: var(--neon-red);
 }
 
 .header__nav li:last-child {
@@ -589,7 +592,7 @@ _______________________________________________________*/
     }
 
     .welcome {
-        background-image: linear-gradient(to top, #190A05, #870000);
+        background-image: linear-gradient(to top, var(--neon-red), var(--dark));
     }
     
     .about-me__description {
