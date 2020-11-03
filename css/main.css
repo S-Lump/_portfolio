@@ -399,6 +399,11 @@ _______________________________________________________*/
     background-image: url(../static/app1.jpg);
 }
 
+.portfolio__item:nth-child(2) {
+    background-image: url(../static/3d.jpg);
+    background-size: contain;
+}
+
 
 /*******************************************************
                       Popup
@@ -432,8 +437,6 @@ _______________________________________________________*/
 
 .frame {
     display: none;
-    flex-direction: column;
-    justify-content: flex-end;
     width: 90vh;
     height: 90vh;
     background-color: white;
@@ -442,6 +445,8 @@ _______________________________________________________*/
 }
 
 .frame.app1 {
+    flex-direction: column;
+    justify-content: flex-end;
     background-image: url(../static/app1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -656,6 +661,111 @@ _______________________________________________________*/
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+/*******************************************************
+                      App2
+_______________________________________________________*/
+
+.frame.app2 {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    perspective: 2000px;
+}
+
+.info {
+    color: black;
+    font-family: "Arial", serif;
+}
+
+.cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    transform-style: preserve-3d;
+    min-height: 50%;
+    width: 200px;
+    border-radius: 10px;
+    padding: 0 20px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.product {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product img {
+    width: 100px;
+    z-index: 2;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    background-image: linear-gradient(
+        to right,
+        rgba(245, 70, 66, 0.75),
+        rgba(8, 83, 156, 0.75)
+    );
+    position: absolute;
+    border-radius: 50%;
+}
+
+.info .title {
+    font-size: 30px;
+}
+
+.info h3 {
+    font-size: 14px;
+    font-weight: lighter;
+    padding: 10px 0;
+    color: #585858;
+}
+
+.sizes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sizes button {
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+}
+
+button.active {
+    background: #585858;
+    color: white;
+}
+
+.purchase {
+    margin: 10px 0;
+}
+
+.purchase button {
+    width: 100%;
+    padding: 5px 0;
+    background: #f54641;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bolder;
 }
 
 
