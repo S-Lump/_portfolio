@@ -633,6 +633,10 @@ _______________________________________________________*/
         background-image: url(../static/close.svg);
     }
 
+    .header {
+        position: sticky;
+    }
+
     .header._active-mobile {
         height: 300px;  
     }
