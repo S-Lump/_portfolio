@@ -75,3 +75,32 @@ function handleCloseBurger(e) {
 for (let i = 0; i < $lis.length; i++) {
     $lis[i].addEventListener('click', handleCloseBurger);
 }
+
+
+// Popup
+const $btn = document.querySelector('.close-popup');
+const $popup = document.querySelector('.popup');
+const $portItems = document.querySelectorAll('.portfolio__item');
+const $frames = document.querySelectorAll('.frame');
+console.log($portItems, $frames)
+
+$btn.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    $popup.style.display = 'none';
+    for (let i = 0; i < $frames.length; i++) {
+        $frames[i].style.display = 'none';
+    }
+})
+
+function handleOpenPopup(e) {
+    e.preventDefault();
+    $popup.style.display = 'flex';
+    console.log($frames[this.id - 1])
+    $frames[this.id - 1].style.display = 'flex'
+}
+
+for (let i = 0; i < $portItems.length; i++) {
+    $portItems[i].addEventListener('click', handleOpenPopup);
+}
+
