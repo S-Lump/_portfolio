@@ -372,22 +372,93 @@ _______________________________________________________*/
 }
 
 .portfolio__item {
-    min-width: 36%;
-    min-height: 150px;
+    position: relative;
+    min-width: 40%;
+    min-height: 200px;
     background-color: #fff;
     margin-bottom: 30px;
-    background-image: url(../static/head2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border-radius: 5px;
     transform: translate(0, 120%);
     opacity: 0;
     transition: all 0.8s;
 } 
 
+.portfolio__block a:hover {
+    transform: scale(1.02);
+}
+
 .portfolio__item._active {
     transform: translate(0, 0);
     opacity: 1;
+}
+
+.portfolio__item:first-child {
+    background-image: url(../static/app1.jpg);
+}
+
+
+/*******************************************************
+                      Popup
+_______________________________________________________*/
+
+.popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    transition: all 0.8s;
+}
+
+.close-popup {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: url(../static/close-popup.svg);
+    background-size: contain;
+}
+
+.frame {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 90vh;
+    height: 90vh;
+    background-color: white;
+    margin: auto;
+    transition: all 0.8s;
+}
+
+.frame.app1 {
+    background-image: url(../static/app1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.frame .frame-description {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.frame-text {
+    max-width: 60%;
 }
 
 
@@ -682,7 +753,7 @@ _______________________________________________________*/
 
     .portfolio__item {
         min-width: 80%;
-        min-height: 100px;
+        min-height: 200px;
     }
 
     .contacts__block {
@@ -716,5 +787,15 @@ _______________________________________________________*/
 
     .about-me__text li {
         transform: translate(0, 120%);
+    }
+
+    .frame {
+        width: 90vw;
+        height: 90vw;
+    }
+}
+@media (max-width:500px) {
+    .frame {
+        font-size: 14px;
     }
 }
