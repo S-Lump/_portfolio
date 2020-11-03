@@ -37,14 +37,41 @@ if (animItems.length > 0) {
 
 
 // Fixed header
-const $welcome = document.querySelector('.welcome');
-const $header = document.querySelector('.header');
+// const $welcome = document.querySelector('.welcome');
+// const $header = document.querySelector('.header');
 
-window.addEventListener('scroll', fixHeader);
-function fixHeader(params) {
-    if (pageYOffset > $welcome.offsetHeight) {
-        $header.classList.add('_on-top');
-    } else if ($header.classList.contains('_on-top')) {
-        $header.classList.remove('_on-top');
+// window.addEventListener('scroll', fixHeader);
+// function fixHeader(params) {
+//     if (pageYOffset > $welcome.offsetHeight) {
+//         $header.classList.add('_on-top');
+//     } else if ($header.classList.contains('_on-top')) {
+//         $header.classList.remove('_on-top');
+//     }
+// }
+
+// Burger
+const $burger = document.querySelector('.burger-link');
+const $header = document.querySelector('.header');
+const $lis = document.querySelectorAll('.ml');
+
+$burger.addEventListener('click', e => {
+    e.preventDefault();
+    
+    $header.classList.toggle('_active-mobile');
+    $burger.classList.toggle('_active-mobile');
+    for (let i = 0; i < $lis.length; i++) {
+        $lis[i].classList.toggle('_active-mobile');
     }
+})
+
+function handleCloseBurger(e) {
+    $header.classList.toggle('_active-mobile');
+    $burger.classList.toggle('_active-mobile');
+    for (let i = 0; i < $lis.length; i++) {
+        $lis[i].classList.toggle('_active-mobile');
+    }
+}
+
+for (let i = 0; i < $lis.length; i++) {
+    $lis[i].addEventListener('click', handleCloseBurger);
 }
