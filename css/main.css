@@ -404,6 +404,15 @@ _______________________________________________________*/
     background-size: contain;
 }
 
+.portfolio__item:nth-child(3) {
+    background-color: var(--neon-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 120px;
+}
+
 
 /*******************************************************
                       Popup
@@ -464,6 +473,16 @@ _______________________________________________________*/
 
 .frame-text {
     max-width: 60%;
+}
+
+.app3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10%;
+    background: var(--neon-red);
 }
 
 
